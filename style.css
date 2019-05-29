@@ -3,3 +3,10 @@
 :: Template Author: Mirana Andriamanantena & Andry Ramananarivo
 :: Version: v1.0.0
 ----------------
+*/
+.menu-bar {
+    margin-top: 34px;
+}
+.mega-menu {
+    background: rgba(0, 0, 0, 0.42);
+}
