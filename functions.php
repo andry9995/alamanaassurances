@@ -30,6 +30,9 @@ function add_menuclass($ulclass) {
 add_filter('wp_nav_menu','add_menuclass');
 require_once ( ALAMA_ASSURANCE ."/template-parts/simple_walker.php");
 require_once (ALAMA_ASSURANCE . '/includes/class-themes-front.php');
-global $vvm;
-$vvm = new WP_Theme_Front();
+require_once (ALAMA_ASSURANCE . '/includes/class-themes-admin.php');
+global $front;
+$front = new WP_Theme_Front();
 
+global $admin;
+$admin = new WP_Theme_Admin();
