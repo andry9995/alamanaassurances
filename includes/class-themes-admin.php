@@ -26,7 +26,6 @@ class WP_Theme_Admin
 		/**
 		 * Post Type: Communicated.
 		 */
-
 		$labels = array(
 			"name" => __( "Communiqués", "" ),
 			"singular_name" => __( "Communiqué", "" ),
@@ -58,7 +57,6 @@ class WP_Theme_Admin
 		/**
 		 * Post Type: Event.
 		 */
-
 		$labels = array(
 			"name" => __( "Evènements", "" ),
 			"singular_name" => __( "Evènement", "" ),
@@ -90,7 +88,6 @@ class WP_Theme_Admin
 		/**
 		 * Post Type: Promotion.
 		 */
-
 		$labels = array(
 			"name" => __( "Promotions", "" ),
 			"singular_name" => __( "Promotion", "" ),
@@ -122,7 +119,6 @@ class WP_Theme_Admin
 		/**
 		 * Post Type: News.
 		 */
-
 		$labels = array(
 			"name" => __( "Actualités", "" ),
 			"singular_name" => __( "Actualité", "" ),
@@ -155,7 +151,6 @@ class WP_Theme_Admin
 		/**
 		 * Post Type: Informations.
 		 */
-
 		$labels = array(
 			"name" => __( "Informations", "" ),
 			"singular_name" => __( "Information", "" ),
@@ -187,6 +182,9 @@ class WP_Theme_Admin
 
 	public function acf_field(){
 		if( function_exists('acf_add_local_field_group') ){
+			/**
+			 * Slider Configuration
+			 */
 			acf_add_local_field_group(array(
 				'key' => 'group_5cf2a57e208df',
 				'title' => 'configuration',
@@ -313,6 +311,9 @@ class WP_Theme_Admin
 				'description' => '',
 			));
 
+			/**
+			 * Evènt fiels
+			 */
 			acf_add_local_field_group(array(
 				'key' => 'group_5cf54a2ea4ea8',
 				'title' => 'event_fields',
@@ -354,6 +355,9 @@ class WP_Theme_Admin
 				'description' => '',
 			));
 
+			/**
+			 * Home section
+			 */
 			acf_add_local_field_group(array(
 				'key' => 'group_5cf3fe6f64744',
 				'title' => 'home_section',

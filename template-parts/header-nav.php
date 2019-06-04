@@ -20,8 +20,6 @@
             <li><a href="#"><span class="ti-instagram"></span></a></li>
             <li><a href="#"><span class="ti-google"></span></a></li>
             <li><a href="#"><span class="ti-twitter"></span></a></li>
-            <li><a href="#"><span class="ti-linkedin"></span></a></li>
-            <li><a href="#"><span class="ti-dribbble"></span></a></li>
           </ul>
         </div>
       </div>
