@@ -23,6 +23,37 @@ class WP_Theme_Admin
 
     function cptui_register_my_cpts() {
 
+	    /**
+		 * Post Type: Teams.
+		 */
+
+		$labels = array(
+			"name" => __( "Teams", "" ),
+			"singular_name" => __( "Team", "" ),
+		);
+
+		$args = array(
+			"label" => __( "Teams", "" ),
+			"labels" => $labels,
+			"description" => "",
+			"public" => true,
+			"publicly_queryable" => true,
+			"show_ui" => true,
+			"show_in_rest" => false,
+			"rest_base" => "",
+			"has_archive" => false,
+			"show_in_menu" => true,
+			"exclude_from_search" => false,
+			"capability_type" => "post",
+			"map_meta_cap" => true,
+			"hierarchical" => false,
+			"rewrite" => array( "slug" => "team", "with_front" => true ),
+			"query_var" => true,
+			"supports" => array( "title", "editor", "thumbnail" ),
+		);
+
+		register_post_type( "team", $args );
+
 		/**
 		 * Post Type: Communicated.
 		 */
@@ -312,7 +343,7 @@ class WP_Theme_Admin
 			));
 
 			/**
-			 * Evènt fiels
+			 * Evènt fields
 			 */
 			acf_add_local_field_group(array(
 				'key' => 'group_5cf54a2ea4ea8',
@@ -570,9 +601,9 @@ class WP_Theme_Admin
 				'location' => array(
 					array(
 						array(
-							'param' => 'page',
+							'param' => 'post_template',
 							'operator' => '==',
-							'value' => '5',
+							'value' => 'home.php',
 						),
 					),
 				),
@@ -585,6 +616,576 @@ class WP_Theme_Admin
 				'active' => true,
 				'description' => '',
 			));
+
+			/**
+			 * About fields
+			 */
+			acf_add_local_field_group(array(
+				'key' => 'group_5cf6a0af4a7e6',
+				'title' => 'about_fields',
+				'fields' => array(
+					array(
+						'key' => 'field_5cf6a0ed54a1e',
+						'label' => 'header_image',
+						'name' => 'header_image',
+						'type' => 'image',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'return_format' => 'url',
+						'preview_size' => 'large',
+						'library' => 'all',
+						'min_width' => '',
+						'min_height' => '',
+						'min_size' => '',
+						'max_width' => '',
+						'max_height' => '',
+						'max_size' => '',
+						'mime_types' => '',
+					),
+					array(
+						'key' => 'field_5cf6a18bc159a',
+						'label' => 'title_mot_directrice',
+						'name' => 'title_mot_directrice',
+						'type' => 'text',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'maxlength' => '',
+					),
+					array(
+						'key' => 'field_5cf6a1e01f276',
+						'label' => 'mot_de_la_directrice',
+						'name' => 'mot_de_la_directrice',
+						'type' => 'wysiwyg',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => '',
+						'tabs' => 'all',
+						'toolbar' => 'full',
+						'media_upload' => 1,
+						'delay' => 0,
+					),
+					array(
+						'key' => 'field_5cf6ad53ada86',
+						'label' => 'titre_espace_telechargement',
+						'name' => 'titre_espace_telechargement',
+						'type' => 'text',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'maxlength' => '',
+					),
+					array(
+						'key' => 'field_5cf6ae4de5ec3',
+						'label' => 'espace_telechargement_contenue',
+						'name' => 'espace_telechargement_contenue',
+						'type' => 'wysiwyg',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => '',
+						'tabs' => 'all',
+						'toolbar' => 'full',
+						'media_upload' => 1,
+						'delay' => 0,
+					),
+				),
+				'location' => array(
+					array(
+						array(
+							'param' => 'post_template',
+							'operator' => '==',
+							'value' => 'apropo.php',
+						),
+					),
+				),
+				'menu_order' => 0,
+				'position' => 'normal',
+				'style' => 'default',
+				'label_placement' => 'top',
+				'instruction_placement' => 'label',
+				'hide_on_screen' => '',
+				'active' => true,
+				'description' => '',
+			));
+
+			/**
+			 * Contact fields
+			 */
+			acf_add_local_field_group(array(
+				'key' => 'group_5cf6b67f89c89',
+				'title' => 'contact_fields',
+				'fields' => array(
+					array(
+						'key' => 'field_5cf6b69650e79',
+						'label' => 'header_image',
+						'name' => 'header_image',
+						'type' => 'image',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'return_format' => 'url',
+						'preview_size' => 'large',
+						'library' => 'all',
+						'min_width' => '',
+						'min_height' => '',
+						'min_size' => '',
+						'max_width' => '',
+						'max_height' => '',
+						'max_size' => '',
+						'mime_types' => '',
+					),
+					array(
+						'key' => 'field_5cf6b6cc50e7a',
+						'label' => 'bp',
+						'name' => 'bp',
+						'type' => 'text',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'maxlength' => '',
+					),
+					array(
+						'key' => 'field_5cf6b6dd50e7b',
+						'label' => 'phone',
+						'name' => 'phone',
+						'type' => 'text',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'maxlength' => '',
+					),
+					array(
+						'key' => 'field_5cf6b6fe50e7c',
+						'label' => 'email',
+						'name' => 'email',
+						'type' => 'email',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+					),
+				),
+				'location' => array(
+					array(
+						array(
+							'param' => 'post_template',
+							'operator' => '==',
+							'value' => 'contact.php',
+						),
+					),
+				),
+				'menu_order' => 0,
+				'position' => 'normal',
+				'style' => 'default',
+				'label_placement' => 'top',
+				'instruction_placement' => 'label',
+				'hide_on_screen' => '',
+				'active' => true,
+				'description' => '',
+			));
+
+			/**
+			 * Promotion fields
+			 */
+			acf_add_local_field_group(array(
+				'key' => 'group_5cf69bfd89c9d',
+				'title' => 'promotion_fields',
+				'fields' => array(
+					array(
+						'key' => 'field_5cf69c5436edb',
+						'label' => 'bg',
+						'name' => 'bg',
+						'type' => 'image',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'return_format' => 'url',
+						'preview_size' => 'large',
+						'library' => 'all',
+						'min_width' => '',
+						'min_height' => '',
+						'min_size' => '',
+						'max_width' => '',
+						'max_height' => '',
+						'max_size' => '',
+						'mime_types' => '',
+					),
+				),
+				'location' => array(
+					array(
+						array(
+							'param' => 'post_type',
+							'operator' => '==',
+							'value' => 'promotion',
+						),
+					),
+				),
+				'menu_order' => 0,
+				'position' => 'normal',
+				'style' => 'default',
+				'label_placement' => 'top',
+				'instruction_placement' => 'label',
+				'hide_on_screen' => '',
+				'active' => true,
+				'description' => '',
+			));
+
+			/**
+			 * Services fields
+			 */
+			acf_add_local_field_group(array(
+				'key' => 'group_5cf6b05f5c235',
+				'title' => 'service_fields',
+				'fields' => array(
+					array(
+						'key' => 'field_5cf6b069fd629',
+						'label' => 'header_image',
+						'name' => 'header_image',
+						'type' => 'image',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'return_format' => 'url',
+						'preview_size' => 'large',
+						'library' => 'all',
+						'min_width' => '',
+						'min_height' => '',
+						'min_size' => '',
+						'max_width' => '',
+						'max_height' => '',
+						'max_size' => '',
+						'mime_types' => '',
+					),
+					array(
+						'key' => 'field_5cf6b0fe5064d',
+						'label' => 'titre_presentation_des_services',
+						'name' => 'titre_presentation_des_services',
+						'type' => 'text',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'maxlength' => '',
+					),
+					array(
+						'key' => 'field_5cf6b18dfdc88',
+						'label' => 'prestations',
+						'name' => 'prestations',
+						'type' => 'repeater',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'collapsed' => '',
+						'min' => 0,
+						'max' => 0,
+						'layout' => 'table',
+						'button_label' => '',
+						'sub_fields' => array(
+							array(
+								'key' => 'field_5cf6b1b1fdc89',
+								'label' => 'icon',
+								'name' => 'icon',
+								'type' => 'text',
+								'instructions' => '',
+								'required' => 0,
+								'conditional_logic' => 0,
+								'wrapper' => array(
+									'width' => '',
+									'class' => '',
+									'id' => '',
+								),
+								'default_value' => '',
+								'placeholder' => '',
+								'prepend' => '',
+								'append' => '',
+								'maxlength' => '',
+							),
+							array(
+								'key' => 'field_5cf6b1b8fdc8a',
+								'label' => 'title',
+								'name' => 'title',
+								'type' => 'text',
+								'instructions' => '',
+								'required' => 0,
+								'conditional_logic' => 0,
+								'wrapper' => array(
+									'width' => '',
+									'class' => '',
+									'id' => '',
+								),
+								'default_value' => '',
+								'placeholder' => '',
+								'prepend' => '',
+								'append' => '',
+								'maxlength' => '',
+							),
+							array(
+								'key' => 'field_5cf6b1c3fdc8b',
+								'label' => 'content',
+								'name' => 'content',
+								'type' => 'wysiwyg',
+								'instructions' => '',
+								'required' => 0,
+								'conditional_logic' => 0,
+								'wrapper' => array(
+									'width' => '',
+									'class' => '',
+									'id' => '',
+								),
+								'default_value' => '',
+								'tabs' => 'all',
+								'toolbar' => 'full',
+								'media_upload' => 1,
+								'delay' => 0,
+							),
+							array(
+								'key' => 'field_5cf6b1d4fdc8c',
+								'label' => 'bg',
+								'name' => 'bg',
+								'type' => 'image',
+								'instructions' => '',
+								'required' => 0,
+								'conditional_logic' => 0,
+								'wrapper' => array(
+									'width' => '',
+									'class' => '',
+									'id' => '',
+								),
+								'return_format' => 'url',
+								'preview_size' => 'large',
+								'library' => 'all',
+								'min_width' => '',
+								'min_height' => '',
+								'min_size' => '',
+								'max_width' => '',
+								'max_height' => '',
+								'max_size' => '',
+								'mime_types' => '',
+							),
+						),
+					),
+				),
+				'location' => array(
+					array(
+						array(
+							'param' => 'post_template',
+							'operator' => '==',
+							'value' => 'services.php',
+						),
+					),
+				),
+				'menu_order' => 0,
+				'position' => 'normal',
+				'style' => 'default',
+				'label_placement' => 'top',
+				'instruction_placement' => 'label',
+				'hide_on_screen' => '',
+				'active' => true,
+				'description' => '',
+			));
+
+			/**
+			 * Team fields
+			 */
+			acf_add_local_field_group(array(
+				'key' => 'group_5cf6a99d649d7',
+				'title' => 'team_fields',
+				'fields' => array(
+					array(
+						'key' => 'field_5cf6a9aeb03bf',
+						'label' => 'occupation',
+						'name' => 'occupation',
+						'type' => 'text',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'maxlength' => '',
+					),
+				),
+				'location' => array(
+					array(
+						array(
+							'param' => 'post_type',
+							'operator' => '==',
+							'value' => 'team',
+						),
+					),
+				),
+				'menu_order' => 0,
+				'position' => 'normal',
+				'style' => 'default',
+				'label_placement' => 'top',
+				'instruction_placement' => 'label',
+				'hide_on_screen' => '',
+				'active' => true,
+				'description' => '',
+			));
+
+			/**
+			 * Header 
+			 */
+
+			acf_add_local_field_group(array(
+				'key' => 'group_5cf6daa32924a',
+				'title' => 'header_fields',
+				'fields' => array(
+					array(
+						'key' => 'field_5cf6dabe9a338',
+						'label' => 'header_image',
+						'name' => 'header_image',
+						'type' => 'image',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'return_format' => 'url',
+						'preview_size' => 'large',
+						'library' => 'all',
+						'min_width' => '',
+						'min_height' => '',
+						'min_size' => '',
+						'max_width' => '',
+						'max_height' => '',
+						'max_size' => '',
+						'mime_types' => '',
+					),
+				),
+				'location' => array(
+					array(
+						array(
+							'param' => 'page_template',
+							'operator' => '==',
+							'value' => 'events.php',
+						),
+					),
+					array(
+						array(
+							'param' => 'page_template',
+							'operator' => '==',
+							'value' => 'communicateds.php',
+						),
+					),
+					array(
+						array(
+							'param' => 'page_template',
+							'operator' => '==',
+							'value' => 'actualities.php',
+						),
+					),
+				),
+				'menu_order' => 0,
+				'position' => 'normal',
+				'style' => 'default',
+				'label_placement' => 'top',
+				'instruction_placement' => 'label',
+				'hide_on_screen' => '',
+				'active' => true,
+				'description' => '',
+			));
+
 		}
 	}
 }

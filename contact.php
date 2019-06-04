@@ -44,17 +44,6 @@ get_header();
             <li><i class="ti-mobile"></i>Téléphone: <?php echo get_field('phone')?></li>
             <li><i class="ti-email"></i>Email: <?php echo get_field('email')?></li>
           </ul>
-          <!-- <div class="social-icons social-border rounded color-hover mt-50">
-                <ul>
-                  <li class="social-facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li class="social-twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li class="social-dribbble"><a href="#"><i class="fa fa-dribbble"></i> </a></li>
-                  <li class="social-vimeo"><a href="#"><i class="fa fa-vimeo"></i> </a></li>
-                  <li class="social-pinterest"><a href="#"><i class="fa fa-pinterest-p"></i> </a></li>
-                  <li class="social-behance"><a href="#"><i class="fa fa-behance"></i> </a></li>
-                  <li class="social-linkedin"><a href="#"><i class="fa fa-linkedin"></i> </a></li>
-                </ul>
-             </div> -->
             </div>          
          </div>
       </div>
@@ -73,7 +62,7 @@ get_header();
   <div class="row">
   <div class="col-lg-12">
     <div id="formmessage">Success/Error Message Goes Here</div>
-     <form id="contactform" role="form" method="post" action="http://themes.potenzaglobalsolutions.com/html/webster-responsive-multi-purpose-html5-template/php/contact-form.php">
+     <form id="contactform" role="form" method="post" action="">
       <div class="contact-form clearfix">
         <div class="section-field">
           <input id="name" type="text" placeholder="Name*" class="form-control" name="name">
@@ -87,8 +76,6 @@ get_header();
          <div class="section-field textarea">
            <textarea class="input-message form-control" placeholder="Comment*" rows="7" name="message"></textarea>
           </div>
-		    <!-- Google reCaptch-->
-			<!-- <div class="g-recaptcha section-field clearfix" data-sitekey="6LfNmS0UAAAAAO_ZVFQoQmkGPMlQXmKgVbizHFoq"></div> -->
 			<div class="section-field submit-button">
 				<input type="hidden" name="action" value="sendEmail">
 			   <button id="submit" name="submit" type="submit" value="Send" class="button"><span> Envoyez </span> <i class="fa fa-paper-plane"></i></button>

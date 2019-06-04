@@ -1,5 +1,46 @@
 <!--=================================
  footer -->
+<section id="raindrops" class="raindrops" style="height: 50px;"></section>
+ 
+ <section class="contact-box contact-box-top theme-bg">
+  <div class="container">
+    <div class="row pt-20 pb-40">
+      <div class="col-md-4 sm-mb-30">
+        <div class="contact-box">
+          <div class="contact-icon">
+            <i class="ti-map text-white"></i>
+          </div>
+          <div class="contact-info">
+            <h5 class="text-white"> 17504 Carlton Cuevas Rd</h5>
+            <span class="text-white">Gulfport, MS, 39503</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 sm-mb-30">
+        <div class="contact-box">
+          <div class="contact-icon">
+            <i class="ti-headphone text-white"></i>
+          </div>
+          <div class="contact-info">
+            <h5 class="text-white">+(704) 279-1249</h5>
+            <span class="text-white">Mon-Fri 8:30am-6:30pm</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="contact-box">
+          <div class="contact-icon">
+            <i class="ti-email text-white"></i>
+          </div>
+          <div class="contact-info">
+            <h5 class="text-white">letstalk@webster.com</h5>
+          <span class="text-white">24 X 7 online support</span>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
  
 <footer class="footer page-section-pt black-bg">
  <div class="container">
@@ -8,28 +49,28 @@
       <div class="footer-useful-link footer-hedding">
         <h6 class="text-white mb-30 mt-10 text-uppercase">Navigation</h6>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Service</a></li>
-          <li><a href="#">Team</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Accueil</a></li>
+          <li><a href="#">A Propos de Nous</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Equipes</a></li>
         </ul>
       </div>
     </div>
     <div class="col-lg-2 col-sm-6 sm-mb-30">
       <div class="footer-useful-link footer-hedding">
-        <h6 class="text-white mb-30 mt-10 text-uppercase">Useful Link</h6>
+        <h6 class="text-white mb-30 mt-10 text-uppercase">Liens</h6>
         <ul>
-          <li><a href="#">Create Account</a></li>
-          <li><a href="#">Company Philosophy</a></li>
+          <li><a href="#">Politique de confidentialité</a></li>
+          <!-- <li><a href="#">Company Philosophy</a></li>
           <li><a href="#">Corporate Culture</a></li>
           <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Client Management</a></li>
+          <li><a href="#">Client Management</a></li> -->
         </ul>
       </div>
     </div>
     <div class="col-lg-4 col-sm-6 xs-mb-30">
-    <h6 class="text-white mb-30 mt-10 text-uppercase">Contact Us</h6>
+    <h6 class="text-white mb-30 mt-10 text-uppercase">Contact</h6>
     <ul class="addresss-info"> 
         <li><i class="fa fa-map-marker"></i> <p>Address: 17504 Carlton Cuevas Rd, Gulfport, MS, 39503</p> </li>
         <li><i class="fa fa-phone"></i> <a href="tel:7042791249"> <span>+(704) 279-1249 </span> </a> </li>
@@ -37,7 +78,7 @@
       </ul>
     </div>
     <div class="col-lg-4 col-sm-6">
-      <h6 class="text-white mb-30 mt-10 text-uppercase">Subscribe to Our Newsletter</h6>
+      <h6 class="text-white mb-30 mt-10 text-uppercase">Newsletter</h6>
         <p class="mb-30">Sign Up to our Newsletter to get the latest news and offers.</p>
          <div class="footer-Newsletter">
           <div id="mc_embed_signup_scroll">
@@ -64,7 +105,7 @@
       <div class="footer-widget mt-20">
         <div class="row">
           <div class="col-lg-6 col-md-6">
-           <p class="mt-15"> &copy;Copyright <span id="copyright"> <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span> <a href="#"> Webster </a> All Rights Reserved </p>
+           <p class="mt-15"> &copy;Copyright <span id="copyright"> <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span> <a href="#"> Alamana Assurances </a> All Rights Reserved </p>
           </div>
           <div class="col-lg-6 col-md-6 text-left text-md-right">
             <div class="social-icons color-hover mt-10">
@@ -87,6 +128,14 @@
 </div><!-- wrapper End -->
 
 <div id="back-to-top"><a class="top arrow" href="#top"><i class="fa fa-angle-up"></i> <span>TOP</span></a></div>
+
+<script type="text/javascript">
+  <?php if( is_front_page() || is_home() ) : ?>
+    var plugin_path = "./wp-content/themes/alamanaassurances/assets/js/";
+  <?php else : ?>
+    var plugin_path = "../wp-content/themes/alamanaassurances/assets/js/";
+  <?php endif; ?>
+</script>
 
 <?php wp_footer(); ?>
 

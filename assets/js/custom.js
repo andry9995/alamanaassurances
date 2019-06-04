@@ -56,7 +56,7 @@ NOTE: This file contains all scripts for the actual Template.
   "use strict";
   var POTENZA = {};
 
-  var plugin_path = "./wp-content/themes/alamanaassurances/assets/js/";
+  // var plugin_path = "wp-content/themes/alamanaassurances/assets/js/";
 
   /*************************
   Predefined Variables
